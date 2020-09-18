@@ -1,4 +1,13 @@
 def join_nested_strings(src)
-  # src will be an Array of Arrays of Strings and Integers
-  # Combine all Strings present in the AoA into a single value and return it
+  string_array = []
+  for outer in src do
+    for inner in outer do
+      if inner.is_a?(String) then
+        string_array.push(inner)
+      end
+    end
+    
+  end
+  
+  string_array.join(" ")
 end
